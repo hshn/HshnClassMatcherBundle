@@ -6,6 +6,7 @@ namespace Hshn\ClassMatcherBundle\DependencyInjection;
 
 use Hshn\ClassMatcherBundle\DependencyInjection\Factory\ClassMatcher\AbstractLogicalFactory;
 use Hshn\ClassMatcherBundle\DependencyInjection\Factory\ClassMatcherFactoryInterface;
+use Hshn\ClassMatcherBundle\DependencyInjection\Factory\ClassMatcherNamingStrategyInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -15,7 +16,7 @@ use Symfony\Component\DependencyInjection\Loader;
 /**
  * @author Shota Hoshino <lga0503@gmail.com>
  */
-class HshnClassMatcherExtension extends Extension
+class HshnClassMatcherExtension extends Extension implements ClassMatcherNamingStrategyInterface
 {
     /**
      * @var ClassMatcherFactoryInterface[]
@@ -79,6 +80,10 @@ class HshnClassMatcherExtension extends Extension
     {
         $this->classMatcherFactories[$factory->getType()] = $factory;
 
+        if ($factory instanceof AbstractLogicalFactory) {
+            $factory->setNamingStrategy($this);
+        }
+
         return $this;
     }
 
@@ -95,5 +100,13 @@ class HshnClassMatcherExtension extends Extension
         }
 
         throw new \InvalidArgumentException("Specified ClassMatcher factory '{$type}' is not available.");
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getServiceId($name)
+    {
+        return sprintf('hshn_security_voter_extra.class_matcher.%s', $name);
     }
 }

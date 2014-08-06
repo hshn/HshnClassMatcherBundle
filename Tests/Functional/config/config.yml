@@ -12,3 +12,4 @@ hshn_class_matcher:
     m2: { extended: Foo }
     m3: { implemented: FooInterface }
     m4: { anything: ~ }
+    m5: { and: [m1, m2] }
