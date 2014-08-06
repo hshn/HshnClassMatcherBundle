@@ -18,6 +18,7 @@ class ClassMatcherTest extends WebTestCase
         $provider = $this->getProvider();
 
         $this->assertInstanceOf('Hshn\ClassMatcher\Matcher\EqualsTo', $provider->get('m1'));
+        $this->assertInstanceOf('Hshn\ClassMatcher\Matcher\Extended', $provider->get('m2'));
     }
 
     /**

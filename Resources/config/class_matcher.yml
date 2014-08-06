@@ -8,3 +8,8 @@ services:
     absract: true
     class: Hshn\ClassMatcher\Matcher\EqualsTo
     arguments: [~]
+
+  hshn_class_matcher.class_matcher.extended.def:
+    absract: true
+    class: Hshn\ClassMatcher\Matcher\Extended
+    arguments: [~]
