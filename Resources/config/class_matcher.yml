@@ -13,3 +13,8 @@ services:
     absract: true
     class: Hshn\ClassMatcher\Matcher\Extended
     arguments: [~]
+
+  hshn_class_matcher.class_matcher.implemented.def:
+    absract: true
+    class: Hshn\ClassMatcher\Matcher\Implemented
+    arguments: [~]

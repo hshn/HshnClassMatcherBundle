@@ -10,3 +10,4 @@ hshn_class_matcher:
   matchers:
     m1: { equals: stdClass }
     m2: { extended: Foo }
+    m3: { implemented: FooInterface }

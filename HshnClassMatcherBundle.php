@@ -24,6 +24,7 @@ class HshnClassMatcherBundle extends Bundle
         $extension
             ->addClassMatcherFactory(new ClassMatcher\EqualsFactory())
             ->addClassMatcherFactory(new ClassMatcher\ExtendedFactory())
+            ->addClassMatcherFactory(new ClassMatcher\ImplementedFactory())
         ;
 
         $container->addCompilerPass(new ClassMatcherPass());
