@@ -22,6 +22,7 @@ class ClassMatcherTest extends WebTestCase
         $this->assertInstanceOf('Hshn\ClassMatcher\Matcher\Implemented', $provider->get('m3'));
         $this->assertInstanceOf('Hshn\ClassMatcher\Matcher\Anything', $provider->get('m4'));
         $this->assertInstanceOf('Hshn\ClassMatcher\Matcher\LogicalAnd', $provider->get('m5'));
+        $this->assertInstanceOf('Hshn\ClassMatcher\Matcher\LogicalOr', $provider->get('m6'));
     }
 
     /**

@@ -13,3 +13,4 @@ hshn_class_matcher:
     m3: { implemented: FooInterface }
     m4: { anything: ~ }
     m5: { and: [m1, m2] }
+    m6: { or: [m3, m4] }
