@@ -1,1 +1,4 @@
 services:
+  # provider
+  hshn_class_matcher.matcher_provider:
+    class: Hshn\ClassMatcherBundle\ClassMatcher\ClassMatcherProvider
