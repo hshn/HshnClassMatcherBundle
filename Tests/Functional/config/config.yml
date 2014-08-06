@@ -1,0 +1,10 @@
+framework:
+  secret: test
+  test: ~
+
+services:
+  logger:
+    class: Symfony\Component\HttpKernel\Log\NullLogger
+
+hshn_class_matcher:
+  matchers:
