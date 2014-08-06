@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Hshn\ClassMatcherBundle\DependencyInjection\Factory\ClassMatcher;
 
 use Hshn\ClassMatcherBundle\DependencyInjection\Factory\ClassMatcherFactoryInterface;
