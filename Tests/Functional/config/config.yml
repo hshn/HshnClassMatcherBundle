@@ -14,3 +14,4 @@ hshn_class_matcher:
     m4: { anything: ~ }
     m5: { and: [m1, m2] }
     m6: { or: [m3, m4] }
+    m7: { not: m5 }

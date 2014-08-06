@@ -32,3 +32,8 @@ services:
     abstract: true
     class: Hshn\ClassMatcher\Matcher\LogicalOr
     arguments: [~]
+
+  hshn_class_matcher.class_matcher.not.def:
+    abstract: true
+    class: Hshn\ClassMatcher\Matcher\LogicalNot
+    arguments: [~]
