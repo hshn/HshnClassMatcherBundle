@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Hshn\ClassMatcherBundle\DependencyInjection\Factory;
 
 /**

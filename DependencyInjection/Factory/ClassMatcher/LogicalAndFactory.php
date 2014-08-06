@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Hshn\ClassMatcherBundle\DependencyInjection\Factory\ClassMatcher;
 
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Hshn\ClassMatcherBundle\ClassMatcher;
-
 
 use Hshn\ClassMatcher\MatcherInterface;
 

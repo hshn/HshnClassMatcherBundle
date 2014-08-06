@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Hshn\ClassMatcherBundle\DependencyInjection\Compiler;
-
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
