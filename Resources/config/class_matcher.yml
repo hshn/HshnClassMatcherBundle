@@ -18,3 +18,7 @@ services:
     absract: true
     class: Hshn\ClassMatcher\Matcher\Implemented
     arguments: [~]
+
+  hshn_class_matcher.class_matcher.anything.def:
+    public: false
+    class: Hshn\ClassMatcher\Matcher\Anything
