@@ -2,3 +2,9 @@ services:
   # provider
   hshn_class_matcher.matcher_provider:
     class: Hshn\ClassMatcherBundle\ClassMatcher\ClassMatcherProvider
+
+  # matcher
+  hshn_class_matcher.class_matcher.equals.def:
+    absract: true
+    class: Hshn\ClassMatcher\Matcher\EqualsTo
+    arguments: [~]

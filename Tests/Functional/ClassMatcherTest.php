@@ -2,6 +2,7 @@
 
 
 namespace Hshn\ClassMatcherBundle\Tests\Functional;
+
 use Hshn\ClassMatcherBundle\ClassMatcher\ClassMatcherProvider;
 
 /**
