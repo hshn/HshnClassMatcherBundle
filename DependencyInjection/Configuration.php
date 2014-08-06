@@ -58,7 +58,7 @@ class Configuration implements ConfigurationInterface
                             })
                             ->then(function ($v) {
                                 foreach ($this->matcherFactories as $matcherFactory) {
-                                    if (isset($v[$type = $matcherFactory->getType()])) {
+                                    if (array_key_exists($type = $matcherFactory->getType(), $v)) {
                                         $v['type'] = $type;
                                         break;
                                     }
