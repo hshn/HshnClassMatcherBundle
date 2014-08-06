@@ -1,0 +1,22 @@
+{
+    "name": "hshn/class-matcher-bundle",
+    "type": "symfony-bundle",
+    "require": {
+        "php": ">=5.4",
+        "hshn/class-matcher": "~0.2",
+        "symfony/framework-bundle": "~2.1"
+    },
+    "require-dev": {
+        "symfony/browser-kit": "~2.1"
+    },
+    "autoload": {
+        "psr-4": { "Hshn\\ClassMatcherBundle\\": "" }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shota Hoshino",
+            "email": "lga0503@gmail.com"
+        }
+    ]
+}
