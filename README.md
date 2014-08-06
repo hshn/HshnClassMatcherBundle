@@ -15,7 +15,7 @@ hshn_class_matcher:
         matcher2: { implemented: FooInterface } # matches class that implements FooInterface
         matcher3: { extended: Foo }             # matches class that extends Foo
         matcher4: { anything: ~ }               # matches anything
-        matcher5: { and: [matcher1, matcher3 }  # matches class that matches matcher 'matcher1' and 'matcher3'
+        matcher5: { and: [matcher1, matcher3] } # matches class that matches matcher 'matcher1' and 'matcher3'
         matcher6: { or: [matcher1, matcher2] }  # matches class that matches matcher 'matcher1' or 'matcher2'
         matcher7: { not: matcher3 }             # matches class that do not extends Foo
 ```
@@ -24,6 +24,7 @@ hshn_class_matcher:
 
 ```php
 <?php
+
 $provider = $container->get('hshn_class_matcher.matcher_provider');
 $provider->get('matcher1')->matches('Foo'); // true or false
 ```
