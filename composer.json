@@ -12,6 +12,11 @@
     "autoload": {
         "psr-4": { "Hshn\\ClassMatcherBundle\\": "" }
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    },
     "license": "MIT",
     "authors": [
         {
