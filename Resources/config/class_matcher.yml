@@ -3,37 +3,55 @@ services:
   hshn_class_matcher.matcher_provider:
     class: Hshn\ClassMatcherBundle\ClassMatcher\ClassMatcherProvider
 
+  # matcher builder
+  hshn_class_matcher.matcher_builder:
+    class: Hshn\ClassMatcher\ClassMatcherBuilder
+    factory_class: Hshn\ClassMatcher\ClassMatcher
+    factory_method: createBuilder
+
   # matcher
+  hshn_class_matcher.class_matcher.abstract:
+    abstract: true
+    class: Hshn\ClassMatcher\MatcherInterface
+    factory_service: hshn_class_matcher.matcher_builder
+
   hshn_class_matcher.class_matcher.equals.def:
     absract: true
-    class: Hshn\ClassMatcher\Matcher\EqualsTo
+    parent: hshn_class_matcher.class_matcher.abstract
+    factory_method: equalsTo
     arguments: [~]
 
   hshn_class_matcher.class_matcher.extended.def:
     absract: true
-    class: Hshn\ClassMatcher\Matcher\Extended
+    parent: hshn_class_matcher.class_matcher.abstract
+    factory_method: extended
     arguments: [~]
 
   hshn_class_matcher.class_matcher.implemented.def:
     absract: true
-    class: Hshn\ClassMatcher\Matcher\Implemented
+    parent: hshn_class_matcher.class_matcher.abstract
+    factory_method: implemented
     arguments: [~]
 
   hshn_class_matcher.class_matcher.anything.def:
     public: false
-    class: Hshn\ClassMatcher\Matcher\Anything
+    parent: hshn_class_matcher.class_matcher.abstract
+    factory_method: anything
 
   hshn_class_matcher.class_matcher.and.def:
     abstract: true
-    class: Hshn\ClassMatcher\Matcher\LogicalAnd
+    parent: hshn_class_matcher.class_matcher.abstract
+    factory_method: logicalAnd
     arguments: [~]
 
   hshn_class_matcher.class_matcher.or.def:
     abstract: true
-    class: Hshn\ClassMatcher\Matcher\LogicalOr
+    parent: hshn_class_matcher.class_matcher.abstract
+    factory_method: logicalOr
     arguments: [~]
 
   hshn_class_matcher.class_matcher.not.def:
     abstract: true
-    class: Hshn\ClassMatcher\Matcher\LogicalNot
+    parent: hshn_class_matcher.class_matcher.abstract
+    factory_method: logicalNot
     arguments: [~]
